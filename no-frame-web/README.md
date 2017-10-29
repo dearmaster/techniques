@@ -18,6 +18,7 @@
     <p>
     在特定的连接点，AOP框架执行的动作。各种类型的通知包括“around”、“before”和“throws”通知。<br>
     通知类型将在下面讨论。许多AOP框架包括Spring都是以拦截器做通知模型，维护一个“围绕”连接点的拦截器链
+    <p>
     - before<br>
     - after<br>
     - after-returning<br>
