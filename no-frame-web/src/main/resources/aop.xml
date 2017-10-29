@@ -5,12 +5,18 @@
 
     <bean id="helloWorld" class="com.master.web.aop.HelloWorldImpl" />
     <bean id="timeHandler" class="com.master.web.aop.TimeHandler" />
+    <bean id="logHandler" class="com.master.web.aop.LogHandler" />
 
     <aop:config>
         <aop:aspect id="time" ref="timeHandler">
-            <aop:pointcut id="addAllMethod" expression="execution(* com.master.web.aop.HelloWorld.*(..))" />
-            <aop:before method="printTime" pointcut-ref="addAllMethod" />
-            <aop:after method="printTime" pointcut-ref="addAllMethod" />
+            <aop:pointcut id="printTimePointcut" expression="execution(* com.master.web.aop.HelloWorld.*(..))" />
+            <aop:before method="printTime" pointcut-ref="printTimePointcut" />
+            <aop:after method="printTime" pointcut-ref="printTimePointcut" />
+        </aop:aspect>
+        <aop:aspect id="log" ref="logHandler">
+            <aop:pointcut id="printLogPointcut" expression="execution(* com.master.web.aop.HelloWorld.*World(..))" />
+            <aop:before method="logBefore" pointcut-ref="printLogPointcut" />
+            <aop:after method="logAfter" pointcut-ref="printLogPointcut" />
         </aop:aspect>
     </aop:config>
 

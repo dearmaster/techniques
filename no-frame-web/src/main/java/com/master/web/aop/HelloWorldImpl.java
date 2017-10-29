@@ -16,4 +16,5 @@ public class HelloWorldImpl implements HelloWorld {
     public void printWorld() {
         logger.info("World");
     }
+
 }
