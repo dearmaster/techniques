@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    since Spring can't specify init-method that has parameters
+    so init(config) won't be invoked if the Filter is managed by Spring
+    -->
+    <bean id="filterManagedBySpring" class="com.master.web.filter.FilterManagedBySpring" />
+
+
+    <bean id="servletManagedBySpring" class="com.master.web.servlet.ServletManagedBySpring" lazy-init="true" />
+
+    <!--
+    if a class has init() method, it won't be invoked except you specify it to init-method
+    -->
+    <bean id="testIfInitMethodCanBeInvokedIfNotSpecified" class="com.master.web.bean.TestIfInitMethodCanBeInvokedIfNotSpecified" />
+
+    <!-- parent Bean won't be created if you don't declare it in xml -->
+    <!--<bean id="parentBean" class="com.master.web.bean.ParentBean" />-->
+    <bean id="testIfParentClassWillBeLoaded" class="com.master.web.bean.TestIfParentClassWillBeLoaded" />
+
+</beans>
