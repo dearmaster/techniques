@@ -8,7 +8,7 @@ public class Demo {
 
         System.out.println("------------");
 
-        UserService userService = (UserService) new DynamicProxy().bind(new UserServiceImpl(), new Log());
+        UserService userService = (UserService) new DynamicProxy().bind(new UserServiceImpl(), new Authentication());
         userService.deleteUser();
         System.out.println("------------");
         userService.updateUser();
