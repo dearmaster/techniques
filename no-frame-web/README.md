@@ -8,6 +8,20 @@
 ### jetty test servlet
 ### AOP
 [Tutorial](https://www.tutorialspoint.com/springaop/springaop_implementations.htm "tutorialspoint")
+    <p>
+    < aop:config><br>
+        <aop:aspect id="time" ref="timeHandler"><br>
+            <aop:pointcut id="printTimePointcut" expression="execution(* com.master.web.aop.HelloWorld.*(..))" /><br>
+            <aop:before method="printTime" pointcut-ref="printTimePointcut" /><br>
+            <aop:after method="printTime" pointcut-ref="printTimePointcut" /><br>
+        </aop:aspect><br>
+        <aop:aspect id="log" ref="logHandler"><br>
+            <aop:pointcut id="printLogPointcut" expression="execution(* com.master.web.aop.HelloWorld.*World(..))" /><br>
+            <aop:before method="logBefore" pointcut-ref="printLogPointcut" /><br>
+            <aop:after method="logAfter" pointcut-ref="printLogPointcut" /><br>
+        </aop:aspect><br>
+    </aop:config>
+    
 >* Aspect - 方面<br>
     <p>
     一个关注点的模块化，这个关注点实现可能另外横切多个对象
