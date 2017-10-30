@@ -20,27 +20,31 @@ public class DynamicProxy implements InvocationHandler {
         Method targetMethod = target.getClass().getMethod(method.getName()); //TODO
         MethodNeededAnnotation annotation = targetMethod.getDeclaredAnnotation(MethodNeededAnnotation.class);
         Method methodToInject;
-        switch (annotation.value()) {
-            case BEFORE:
-                methodToInject = getMethod(inject, MethodAnnotation.MethodType.BEFORE);
+        if(null != annotation) {
+            switch (annotation.value()) {
+                case BEFORE:
+                    methodToInject = getMethod(inject, MethodAnnotation.MethodType.BEFORE);
 
-                methodToInject.invoke(inject, null);
-                method.invoke(target, args);
-                break;
-            case AFTER:
-                methodToInject = getMethod(inject, MethodAnnotation.MethodType.AFTER);
+                    methodToInject.invoke(inject, null);
+                    method.invoke(target, args);
+                    break;
+                case AFTER:
+                    methodToInject = getMethod(inject, MethodAnnotation.MethodType.AFTER);
 
-                method.invoke(target, args);
-                methodToInject.invoke(inject, null);
-                break;
-            case AROUND:
-                methodToInject = getMethod(inject, MethodAnnotation.MethodType.AROUND);
+                    method.invoke(target, args);
+                    methodToInject.invoke(inject, null);
+                    break;
+                case AROUND:
+                    methodToInject = getMethod(inject, MethodAnnotation.MethodType.AROUND);
 
-                methodToInject.invoke(inject, null);
-                method.invoke(target, args);
-                methodToInject.invoke(inject, null);
+                    methodToInject.invoke(inject, null);
+                    method.invoke(target, args);
+                    methodToInject.invoke(inject, null);
 
-                break;
+                    break;
+            }
+        } else {
+            method.invoke(target, args);
         }
 
         return null;
