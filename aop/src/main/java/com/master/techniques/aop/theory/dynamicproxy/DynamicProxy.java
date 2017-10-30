@@ -53,7 +53,7 @@ public class DynamicProxy implements InvocationHandler {
                 return method;
             }
         }
-        return null;
+        throw new RuntimeException(methodType + " method not found in " + inject.getClass());
     }
 
 }
