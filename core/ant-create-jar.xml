@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Set the project name, basedir and default target to be executed-->
+<project name="Ant-Jar-Test" default="mainTarget" basedir=".">
+	<!-- Sets the properties here-->
+	<property name="src.dir" location="src/main" />
+	<property name="build.dir" location="bin" />
+	<property name="build.dest.file" location="test.jar" />
+	<property name="lib.dir" location="testlib" />
+
+	<path id="build.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- Target for deleting the existing directories-->
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${build.dest.file}" />
+	</target>
+
+	<!-- Target for creating the new directories-->
+	<target name="makedir">
+		<mkdir dir="${build.dir}" />
+	</target>
+
+	<!-- Target for compiling the java code-->
+	<target name="compile" depends="clean, makedir">
+		<javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="on">
+			<compilerarg line="-encoding UTF-8" />
+			<classpath refid="build.classpath" />
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="${build.dest.file}" basedir="${build.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="com.master.core.AntBuildDemo" />
+			</manifest>
+			<fileset dir="./src/main/resources" />
+		</jar>
+	</target>
+
+	<!-- Defualt target to run all targets-->
+	<target name="mainTarget" depends="jar">
+		<description>Main target</description>
+		<echo message="main target finished" />
+	</target>
+
+</project>

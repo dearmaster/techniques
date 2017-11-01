@@ -1,0 +1,55 @@
+<project name="Run java program" basedir="." default="ExecuteJavaClass">
+
+	<property name="param.message" value="Lucy" />
+	<property name="src.dir" location="src/main" />
+	<property name="build.dir" location="target" />
+	<property name="build.dest.file" location="test.jar" />
+	<property name="build.classpath" location="testlib" />
+
+
+	<path id="build.classpath">
+		<fileset dir="${build.classpath}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="ExecuteJavaClass" depends="jar">
+
+		<path id="runtime.path">
+			<!-- class path to the jars referenced by this project -->
+			<fileset dir="${build.classpath}" includes="*.jar" />
+			<!-- to include the classes of this project -->
+			<fileset dir="." includes="*.jar" />
+		</path>
+		<echo message="Ant classpath directory: ${build.classpath}" />
+		<java classname="com.master.core.AntBuildDemo" fork="false" classpathref="runtime.path">
+			<arg value="${param.message}" />
+		</java>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="${build.dest.file}" basedir="${build.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="com.master.core.AntBuildDemo" />
+			</manifest>
+			<fileset dir="./src/main/resources" />
+		</jar>
+	</target>
+
+	<target name="compile" depends="clean, makedir">
+		<javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="on">
+			<compilerarg line="-encoding UTF-8" />
+			<classpath refid="build.classpath" />
+		</javac>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete file="${build.dest.file}" />
+	</target>
+
+	<target name="makedir">
+		<mkdir dir="${build.dir}" />
+	</target>
+
+</project>
