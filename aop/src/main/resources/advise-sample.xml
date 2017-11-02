@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentService" class="com.master.techniques.aop.spring.xml.StudentServiceImpl"/>
+
+    <bean id="beforeMethodBean" class="com.master.techniques.aop.spring.xml.BeforeAdvise"/>
+    <bean id="AfterMethodBean" class="com.master.techniques.aop.spring.xml.AfterAdvise"/>
+    <bean id="aroundMethodBean" class="com.master.techniques.aop.spring.xml.AroundAdvise"/>
+    <bean id="afterThrowingBean" class="com.master.techniques.aop.spring.xml.AfterThrowingAdvise"/>
+
+    <bean id="studentServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="studentService"/>
+        <property name="interceptorNames">
+            <list>
+                <value>beforeMethodBean</value>
+                <value>AfterMethodBean</value>
+                <value>aroundMethodBean</value>
+                <value>afterThrowingBean</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
