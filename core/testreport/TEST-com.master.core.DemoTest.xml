@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="OJJQKIIBYHKBTGD" name="com.master.core.DemoTest" skipped="0" tests="1" time="0.047" timestamp="2017-11-01T14:17:07">
+  <properties>
+    <property name="ant.project.invoked-targets" value="main" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.boot.library.path" value="E:\develop\tools\java\jdk1.8.0_60\jre\bin" />
+    <property name="java.vm.version" value="25.60-b23" />
+    <property name="ant.library.dir" value="E:\develop\tools\IntelliJ IDEA 2017.1.4\lib\ant\lib" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="user.script" value="" />
+    <property name="user.country" value="CN" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="user.dir" value="E:\develop\tools\Git_Repos\techniques\core" />
+    <property name="java.runtime.version" value="1.8.0_60-b27" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="basedir" value="E:\develop\tools\Git_Repos\techniques\core" />
+    <property name="java.endorsed.dirs" value="E:\develop\tools\java\jdk1.8.0_60\jre\lib\endorsed" />
+    <property name="os.arch" value="amd64" />
+    <property name="ant.project.default-target" value="main" />
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\" />
+    <property name="ant.core.lib" value="E:\develop\tools\IntelliJ IDEA 2017.1.4\lib\ant\lib\ant.jar" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="user.variant" value="" />
+    <property name="os.name" value="Windows 7" />
+    <property name="ant.home" value="E:\develop\tools\IntelliJ IDEA 2017.1.4\lib\ant" />
+    <property name="build.dir" value="E:\develop\tools\Git_Repos\techniques\core\target" />
+    <property name="ant.project.name" value="Ant-Test" />
+    <property name="sun.jnu.encoding" value="GBK" />
+    <property name="java.library.path" value="E:\develop\tools\java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:\app\Administrator\product\11.2.0\dbhome_1\bin;F:\SAP\ASE-16_0\jobscheduler\bin;F:\SAP\ASE-16_0\dll;F:\SAP\ASE-16_0\bin;F:\SAP\SCC-3_3\bin;F:\SAP\DBISQL-16_0\bin;F:\SAP\DataAccess64\ADONET\dll;F:\SAP\DataAccess\ADONET\dll;F:\SAP\DataAccess64\ODBC\dll;F:\SAP\DataAccess\ODBC\dll;F:\SAP\OCS-16_0\lib3p64;F:\SAP\OCS-16_0\lib3p;F:\SAP\OCS-16_0\dll;F:\SAP\OCS-16_0\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\develop\tools\java\jdk1.8.0_60\bin;E:\develop\tools\java\jdk1.8.0_60\jre\bin;E:\develop\tools\btrace\bin;E:\develop\tools\VisualSVN\bin;E:\develop\tools\TortoiseSVN\bin;E:\develop\tools\gradle-3.1\bin;E:\develop\tools\apache-maven-3.3.3\bin;." />
+    <property name="ant.file.Ant-Test" value="E:\develop\tools\Git_Repos\techniques\core\ant-junit.xml" />
+    <property name="java.class.version" value="52.0" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="os.version" value="6.1" />
+    <property name="ant.file" value="E:\develop\tools\Git_Repos\techniques\core\ant-junit.xml" />
+    <property name="user.home" value="C:\Users\Administrator" />
+    <property name="user.timezone" value="" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="file.encoding" value="GBK" />
+    <property name="java.class.path" value="E:\develop\tools\Git_Repos\techniques\core\testlib\junit-4.12.jar;E:\develop\tools\Git_Repos\techniques\core\testlib\log4j-1.2.17.jar;E:\develop\tools\Git_Repos\techniques\core\target;E:\develop\tools\Git_Repos\techniques\core\src;E:\develop\tools\java\jdk1.8.0_60\lib\dt.jar;E:\develop\tools\java\jdk1.8.0_60\lib\tools.jar;E:\develop\tools\IntelliJ IDEA 2017.1.4\lib\ant\lib\ant-launcher.jar;E:\develop\tools\IntelliJ IDEA 2017.1.4\lib\ant\lib\ant.jar;E:\develop\tools\IntelliJ IDEA 2017.1.4\lib\ant\lib\ant-junit.jar;E:\develop\tools\IntelliJ IDEA 2017.1.4\lib\ant\lib\ant-junit4.jar" />
+    <property name="user.name" value="Administrator" />
+    <property name="testreport.dir" value="E:\develop\tools\Git_Repos\techniques\core\testreport" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.master.core.DemoTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,E:\develop\tools\Git_Repos\techniques\core\testreport\TEST-com.master.core.DemoTest.xml crashfile=E:\develop\tools\Git_Repos\techniques\core\junitvmwatcher1668438622138708731.properties propsfile=E:\develop\tools\Git_Repos\techniques\core\junit1454535658537129862.properties" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.home" value="E:\develop\tools\java\jdk1.8.0_60\jre" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="user.language" value="zh" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="test.dir" value="E:\develop\tools\Git_Repos\techniques\core\src" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="java.version" value="1.8.0_60" />
+    <property name="java.ext.dirs" value="E:\develop\tools\java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="sun.boot.class.path" value="E:\develop\tools\java\jdk1.8.0_60\jre\lib\resources.jar;E:\develop\tools\java\jdk1.8.0_60\jre\lib\rt.jar;E:\develop\tools\java\jdk1.8.0_60\jre\lib\sunrsasign.jar;E:\develop\tools\java\jdk1.8.0_60\jre\lib\jsse.jar;E:\develop\tools\java\jdk1.8.0_60\jre\lib\jce.jar;E:\develop\tools\java\jdk1.8.0_60\jre\lib\charsets.jar;E:\develop\tools\java\jdk1.8.0_60\jre\lib\jfr.jar;E:\develop\tools\java\jdk1.8.0_60\jre\classes" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="file.separator" value="\" />
+    <property name="src.dir" value="E:\develop\tools\Git_Repos\techniques\core\src" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="ant.file.type" value="file" />
+    <property name="ant.file.type.Ant-Test" value="file" />
+    <property name="sun.desktop" value="windows" />
+    <property name="sun.cpu.isalist" value="amd64" />
+  </properties>
+  <testcase classname="com.master.core.DemoTest" name="initializationError" time="0.0">
+    <error message="org/hamcrest/SelfDescribing" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+Caused by: java.lang.ClassNotFoundException: org.hamcrest.SelfDescribing
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+</error>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
