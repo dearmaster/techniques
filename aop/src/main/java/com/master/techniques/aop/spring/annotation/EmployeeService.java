@@ -6,4 +6,6 @@ public interface EmployeeService {
 
     Employee getByName(String name);
 
+    void deleteEmployee() throws Throwable;
+
 }

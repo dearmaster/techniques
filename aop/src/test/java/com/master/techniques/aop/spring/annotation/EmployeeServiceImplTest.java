@@ -31,4 +31,12 @@ public class EmployeeServiceImplTest extends TestConfig {
         employeeService.getByName("lily");
     }
 
+    @Test public void deleteEmployee() {
+        try {
+            employeeService.deleteEmployee();
+        } catch (Throwable throwable) {
+//            throwable.printStackTrace();
+        }
+    }
+
 }

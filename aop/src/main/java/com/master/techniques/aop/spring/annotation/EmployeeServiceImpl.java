@@ -18,4 +18,9 @@ public class EmployeeServiceImpl implements EmployeeService {
             return new Employee(200, "unknown employee", 50);
     }
 
+    @Override
+    public void deleteEmployee() throws Throwable {
+        System.out.println(1/0);
+    }
+
 }
