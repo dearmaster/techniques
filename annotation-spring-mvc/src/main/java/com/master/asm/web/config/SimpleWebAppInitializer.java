@@ -2,32 +2,38 @@ package com.master.asm.web.config;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.ContextLoaderListener;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
+import javax.servlet.Filter;
 
 /**
  * Equals to ContextLoaderListener in web.xml
  */
-public class SimpleWebAppInitializer implements WebApplicationInitializer {
+public class SimpleWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     private static final Logger logger = LogManager.getLogger(SimpleWebAppInitializer.class);
 
     @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-        AnnotationConfigWebApplicationContext rootContext=new AnnotationConfigWebApplicationContext();
-        rootContext.register(AppConfig.class);
-        servletContext.addListener(new ContextLoaderListener(rootContext));
-        AnnotationConfigWebApplicationContext webContext=new AnnotationConfigWebApplicationContext();
-        webContext.register(WebConfig.class);
-        ServletRegistration.Dynamic registration = servletContext.addServlet("dispatcher",new DispatcherServlet(webContext));
-        registration.setLoadOnStartup(1);
-        registration.addMapping("/");
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[] {AppConfig.class};
     }
 
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class[] {WebConfig.class};
+    }
+
+    @Override
+    protected String[] getServletMappings() {
+        return new String[]{"/"};
+    }
+
+    @Override
+    protected Filter[] getServletFilters() {
+        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+        characterEncodingFilter.setEncoding("UTF-8");
+        characterEncodingFilter.setForceEncoding(true);
+        return new Filter[] {characterEncodingFilter};
+    }
 }

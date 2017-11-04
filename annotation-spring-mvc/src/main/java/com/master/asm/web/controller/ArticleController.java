@@ -18,13 +18,6 @@ import java.util.List;
 @RequestMapping("/article")
 public class ArticleController {
 
-    public ArticleController() {
-        System.out.println("----------");
-        System.out.println("----------");
-        System.out.println("----------");
-        System.out.println("----------");
-    }
-
     @Resource
     private ArticleService articleService;
 
